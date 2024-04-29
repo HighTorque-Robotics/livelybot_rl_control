@@ -100,21 +100,6 @@ class PaiCfg(LeggedRobotCfg):
 
     class init_state(LeggedRobotCfg.init_state):
         pos = [0.0, 0.0, 0.38]
-
-        # default_joint_angles = {  # = target angles [rad] when action = 0.0
-        #     'left_hip_yaw_joint': -0.,
-        #     'left_hip_roll_joint': -0.,
-        #     'left_hip_pitch_joint': -0.235,
-        #     'left_knee_joint': -0.526,
-        #     'left_ankle_pitch_joint': -0.298,
-        #     'left_ankle_roll_joint': 0.,
-        #     'right_hip_yaw_joint': 0.,
-        #     'right_hip_roll_joint': 0.,
-        #     'right_hip_pitch_joint': 0.235,
-        #     'right_knee_joint': 0.526,
-        #     'right_ankle_pitch_joint': 0.298,
-        #     'right_ankle_roll_joint': 0.,
-        # }
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'left_hip_yaw_joint': 0.0,
             'left_hip_roll_joint': 0.0,
@@ -129,39 +114,13 @@ class PaiCfg(LeggedRobotCfg):
             'right_ankle_pitch_joint': 0.0,
             'right_ankle_roll_joint': 0.0,
         }
-        # default_joint_angles = {  # = target angles [rad] when action = 0.0
-        #     'leg_l1_joint': -0.,
-        #     'leg_l2_joint': -0.,
-        #     'leg_l3_joint': 0.,
-        #     'leg_l4_joint': 0.,
-        #     'leg_l5_joint': 0.,
-        #     'leg_l6_joint': 0.,
-        #     'leg_r1_joint': 0.,
-        #     'leg_r2_joint': 0.,
-        #     'leg_r3_joint': -0.,
-        #     'leg_r4_joint': -0.,
-        #     'leg_r5_joint': -0.,
-        #     'leg_r6_joint': 0.,
-        # }
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        # stiffness = {'hip_yaw_joint': 40.0, 'hip_roll_joint': 40.0, 'hip_pitch_joint': 60.0,
-        #              'knee_joint': 60.0, 'ankle_pitch_joint': 15, 'ankle_roll_joint': 15,}
         stiffness = {'hip_yaw_joint': 40.0, 'hip_roll_joint': 40.0, 'hip_pitch_joint': 80.0,
                      'knee_joint': 80.0, 'ankle_pitch_joint': 15, 'ankle_roll_joint': 15,}
         damping = {'hip_yaw_joint': 0.25, 'hip_roll_joint': 0.25, 'hip_pitch_joint':
                    0.25, 'knee_joint': 0.25, 'ankle_pitch_joint': 0.25, 'ankle_roll_joint': 0.25}
-        # stiffness = {'1_joint': 20.0, '2_joint': 30.0, '3_joint': 20.0,
-        #              '4_joint': 30.0, '5_joint': 15, '6_joint': 15,}
-        # damping = {'1_joint': 0.25, '2_joint': 0.25, '3_joint':
-        #            0.25, '4_joint': 0.25, '5_joint': 0.25, '6_joint': 0.25}
-        
-        # v1 kp kd :pos tracking result worse
-        # stiffness = {'1_joint': 20.0, '2_joint': 30.0, '3_joint': 20.0,
-        #              '4_joint': 30.0, '5_joint': 15, '6_joint': 15,}
-        # damping = {'1_joint': 1.0, '2_joint': 1.0, '3_joint':
-        #            1.0, '4_joint': 1.0, '5_joint': 1.0, '6_joint': 1.0}
 
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
