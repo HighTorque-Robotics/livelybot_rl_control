@@ -105,5 +105,5 @@ The base environment `legged_robot` constructs a rough terrain locomotion task. 
 
 ## Acknowledgment
 
-The implementation of livelybot_rl_control relies on resources from [legged_gym](https://github.com/leggedrobotics/legged_gym)  and [humanoid-gym](https://https://github.com/roboterax/humanoid-gym) projects.
+The implementation of livelybot_rl_control relies on resources from [legged_gym](https://github.com/leggedrobotics/legged_gym)  and [humanoid-gym](https://github.com/roboterax/humanoid-gym) projects.
 
